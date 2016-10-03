@@ -1,0 +1,15 @@
+Variables primitives
+
+char : -128 à 127 / 1 octer
+byte : -128 à 127 / 1 octet
+short -32 768 à 32 767 / 2 octets
+int	-2 147 483 648 à 2 147 483 647 / 4 octets
+long  -9 223 372 036 854 775 808 à 9 223 372 036 854 775 807 / 8 octets
+float	±2-149?1.4×10-45 ? ±2128-2104?3.4×1038 / 4 octets
+double  ±2-1074?4,9×10-324 ? ±21024-2971?1,8×10308 / 8 octets
+booelan : true ou false / 1 octet
+
+
+Et la très spéciale et tr§s utiles var, String qui n'en est pas une !
+
+String : chain de charactere
