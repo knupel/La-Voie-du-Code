@@ -1,11 +1,14 @@
 /**
-Class RPEsvg 1.1.4
+Class RPEsvg 1.2.0
 RPE – Romanesco Processing Environment – 
 * @author Stan le Punk
 * @see https://github.com/StanLepunK/SVG_Vertex-Processing
+* 2016-2016
 */
 
 class RPEsvg {
+  PApplet p5  ;
+  //
   PShape shape_SVG ;
   String path = "" ;
   String folder_brick_name = "brick" ;
@@ -51,14 +54,16 @@ class RPEsvg {
   CONSTRUCTOR
 
   */
-  RPEsvg(String path, String folder_brick_name) {
+  RPEsvg(PApplet p5, String path, String folder_brick_name) {
+    this.p5 = p5 ;
     this.name = file_name(path) ;
     this.folder_brick_name = folder_brick_name ;
     this.path = path ;
     saved_path_bricks_svg = "RPE_SVG/" + folder_brick_name + "/" ;
   }
 
-  RPEsvg(String path) {
+  RPEsvg(PApplet p5, String path) {
+    this.p5 = p5 ;
     this.name = file_name(path) ;
     this.path = path ;
     saved_path_bricks_svg = "RPE_SVG/" + folder_brick_name + "/" ;
@@ -222,6 +227,65 @@ class RPEsvg {
   /**
   ASPECT
   */
+  
+  // Processing void for fill, stroke and stroke weight
+
+  void fill(float value) {
+    display_fill_original = false ;
+    display_fill_custom = true ;
+    fill_custom.set(value,value,value, g.colorModeA) ;
+  }
+
+    void fill(float value, float alpha) {
+    display_fill_original = false ;
+    display_fill_custom = true ;
+    fill_custom.set(value,value,value, alpha) ;
+  }
+
+  void fill(float x, float y, float z) {
+    display_fill_original = false ;
+    display_fill_custom = true ;
+    fill_custom.set(x, y, z, g.colorModeA) ;
+  }
+  
+  void fill(float x, float y, float z, float a) {
+    display_fill_original = false ;
+    display_fill_custom = true ;
+    fill_custom.set(x,y,z,a) ;
+  }
+
+
+  void stroke(float value) {
+    display_stroke_original = false ;
+    display_stroke_custom = true ;
+    stroke_custom.set(value, value, value, g.colorModeA) ;
+  }
+
+  void stroke(float value, float a) {
+    display_stroke_original = false ;
+    display_stroke_custom = true ;
+    stroke_custom.set(value, value, value, a) ;
+  }
+
+  void stroke(float x, float y, float z) {
+    display_stroke_original = false ;
+    display_stroke_custom = true ;
+    stroke_custom.set(x, y, z, g.colorModeA) ;
+  }
+
+  void stroke(float x, float y, float z, float a) {
+    display_stroke_original = false ;
+    display_stroke_custom = true ;
+    stroke_custom.set(x,y,z,a) ;
+  }
+
+  void strokeWeight(float x) {
+    display_thickness_original = false ;
+    display_thickness_custom = true ;
+    thickness_custom = x ;
+  }
+
+
 
   void original_style(boolean fill, boolean stroke) {
     display_fill_original = fill ;
@@ -237,24 +301,8 @@ class RPEsvg {
     display_stroke_original = stroke ;
     display_thickness_original = stroke ;
   }
+  
 
-  void fill_custom(int x, int y, int z, int a) {
-    display_fill_original = false ;
-    display_fill_custom = true ;
-    fill_custom.set(x,y,z,a) ;
-  }
-
-  void stroke_custom(int x, int y, int z, int a) {
-    display_stroke_original = false ;
-    display_stroke_custom = true ;
-    stroke_custom.set(x,y,z,a) ;
-  }
-
-  void thickness_custom(float x) {
-    display_thickness_original = false ;
-    display_thickness_custom = true ;
-    thickness_custom = x ;
-  }
 
   void fill_factor(float x, float y, float z, float a) {
     fill_factor.set(x,y,z,a) ;
@@ -621,13 +669,19 @@ class RPEsvg {
   }
 
   void aspect_custom() {
-    if(fill_custom.a > 0 && display_fill_custom && !display_fill_original) fill(fill_custom.r *fill_factor.x,fill_custom.g *fill_factor.y, fill_custom.b *fill_factor.y, fill_custom.a *fill_factor.w) ; 
-    if(stroke_custom.a > 0 || thickness_custom > 0 && display_stroke_custom && !display_stroke_original) {
-      stroke(stroke_custom.r *stroke_factor.x,stroke_custom.g *stroke_factor.y,stroke_custom.b *stroke_factor.z, stroke_custom.a *stroke_factor.w) ;
-      strokeWeight(thickness_custom) ;
+    if(fill_custom.a > 0 && display_fill_custom && !display_fill_original) {
+      p5.fill(fill_custom.r *fill_factor.x, fill_custom.g *fill_factor.y, fill_custom.b *fill_factor.y, fill_custom.a *fill_factor.w) ; 
     }
-    if(!display_fill_original && !display_fill_custom) noFill() ;
-    if(!display_stroke_original && !display_stroke_custom) noStroke() ;
+    if(stroke_custom.a > 0 || thickness_custom > 0 && display_stroke_custom && !display_stroke_original) {
+      p5.stroke(stroke_custom.r *stroke_factor.x, stroke_custom.g *stroke_factor.y, stroke_custom.b *stroke_factor.z, stroke_custom.a *stroke_factor.w) ;
+      p5.strokeWeight(thickness_custom) ;
+    }
+    if(!display_fill_original && !display_fill_custom) {
+      p5.noFill() ;
+    }
+    if(!display_stroke_original && !display_stroke_custom) {
+      p5.noStroke() ;
+    }
   }
 
 
@@ -1596,13 +1650,13 @@ BUILD
     void aspect_fill(Vec4 factor) {
       // HSB mmode
       if(g.colorMode == 3) {
-        fill(hue(fill) *factor.x, saturation(fill) *factor.y, brightness(fill) *factor.z, opacity *g.colorModeA *factor.w) ;
+        p5.fill(hue(fill) *factor.x, saturation(fill) *factor.y, brightness(fill) *factor.z, opacity *g.colorModeA *factor.w) ;
       // RGB mmode
       } else if( g.colorMode == 1 ) {
         float red_col = red(fill) *factor.x ;
         float alpha_col = opacity *g.colorModeA *factor.w ;
         alpha_col = opacity *g.colorModeA *factor.w  ;
-        fill(red_col, green(fill) *factor.y, blue(fill) *factor.z, alpha_col) ;
+        p5.fill(red_col, green(fill) *factor.y, blue(fill) *factor.z, alpha_col) ;
       }
     }
 
@@ -1612,18 +1666,18 @@ BUILD
       // HSB mmode
       if(g.colorMode == 3) {
         if(strokeWeight <= 0)  {
-          noStroke() ;
+          p5.noStroke() ;
         } else {
-          strokeWeight(thickness) ;
-          stroke(hue(stroke) *factor.x, saturation(stroke) *factor.y, brightness(stroke) *factor.z, opacity *g.colorModeA *factor.w) ; 
+          p5.strokeWeight(thickness) ;
+          p5.stroke(hue(stroke) *factor.x, saturation(stroke) *factor.y, brightness(stroke) *factor.z, opacity *g.colorModeA *factor.w) ; 
         }
       // RGB mmode
       } else if( g.colorMode == 1 ) {
         if(strokeWeight <= 0)  {
-          noStroke() ;
+          p5.noStroke() ;
         } else {
-          strokeWeight(thickness) ;
-          stroke(red(stroke) *factor.x, green(stroke) *factor.y, blue(stroke) *factor.z, opacity *g.colorModeA *factor.w) ; 
+          p5.strokeWeight(thickness) ;
+          p5.stroke(red(stroke) *factor.x, green(stroke) *factor.y, blue(stroke) *factor.z, opacity *g.colorModeA *factor.w) ; 
         }
       }
     }
