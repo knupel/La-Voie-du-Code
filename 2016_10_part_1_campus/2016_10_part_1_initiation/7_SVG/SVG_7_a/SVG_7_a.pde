@@ -1,7 +1,7 @@
 // RPE SVG
 RPEsvg svg ;
 void setup() {
-  size(600,600, P3D) ;
+  size(600,600) ;
   
   String path = "pirate_couleur.svg" ;
   svg = new RPEsvg(this, path) ;
@@ -14,7 +14,7 @@ void draw() {
   svg.svg_mode(CENTER) ;
 
   // variable common to the 2D and 3D vertex
-  float scale = 0.5;
+  float scale = 1.5;
   int jitting = 10 ;
 
   Vec2 pos_2D = Vec2 (mouseX,mouseY); 
@@ -22,9 +22,9 @@ void draw() {
   Vec2 scale_2D = Vec2(scale, scale) ;
 
 
-  // full_svg_2D(pos_2D, scale_2D, jitter_2D) ;
+  full_svg_2D(pos_2D, scale_2D, jitter_2D) ;
   
-  name_svg_2D(pos_2D, scale_2D, jitter_2D) ;
+  //name_svg_2D(pos_2D, scale_2D, jitter_2D) ;
   
   int which = (int)random(svg.num_brick()) ;
   // ID_svg_2D(pos_2D, scale_2D, jitter_2D, which) ;
