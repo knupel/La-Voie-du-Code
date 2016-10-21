@@ -10,10 +10,11 @@ void setup() {
 
 void draw() {
   background(0) ;
+  // mauvaise position
+  /*
   fill(255) ;
   text(sentence, 48, height/2) ;
-  
-  //
+  */
   pushMatrix() ;
   
   translate(width/2,height/2,-50) ;
@@ -24,4 +25,9 @@ void draw() {
   rect(-width/2,-height/2, width, height) ;
   
   popMatrix() ;
+  
+  // Toujours placer le texte en dernier pour éviter le problème d'arrière plan sur les lettres
+  // Bonne position
+  fill(255) ;
+  text(sentence, 48, height/2) ;
 }
