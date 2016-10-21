@@ -1,0 +1,47 @@
+GUIDE AGENT 2D.txt
+
+Class Agent
+------------
+Constructor
+-------------
+Agent(Vec2 pos, int radius, int velocity, int life, String name, Vec4 colour)
+
+
+
+
+variable
+-----------
+Vec2 pos, motion, direction ;
+Vec2 velocity_xy ;
+Vec4 colour ;
+int velocity ;
+int radius ;
+  
+String name ;
+int life ;
+
+int hunger  ;
+
+
+
+
+
+
+
+methode
+----------
+set agent
+void set(int step_hunger) // by default the step_hunger is a radius
+
+
+motion method
+-
+void rebound(float top, float bottom, float left, float right)
+void motion() ;
+void set_position() ;
+
+statement method
+-
+int hunger_speed
+void hunger(hunger_speed)
+
