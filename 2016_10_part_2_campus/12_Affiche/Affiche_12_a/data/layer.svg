@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="600px" height="600px" viewBox="0 0 600 600" enable-background="new 0 0 600 600" xml:space="preserve">
+<g id="NiveauF">
+	<rect x="266" y="257" fill="#231F20" width="66" height="66"/>
+</g>
+<g id="NiveauE">
+	<rect x="168" y="380" fill="#231F20" width="66" height="66"/>
+	<rect x="362" y="150" fill="#231F20" width="66" height="66"/>
+</g>
+<g id="NiveauD">
+	<rect x="266" y="256" fill="#231F20" width="66" height="66"/>
+	<rect x="168" y="379" fill="#231F20" width="66" height="66"/>
+	<rect x="362" y="149" fill="#231F20" width="66" height="66"/>
+</g>
+<g id="NiveauC">
+	<circle fill="#231F20" cx="186.5" cy="170.5" r="35.5"/>
+	<circle fill="#231F20" cx="431.5" cy="181.5" r="41.5"/>
+	<circle fill="#231F20" cx="221.5" cy="416.5" r="37.5"/>
+	<circle fill="#231F20" cx="418" cy="410" r="42"/>
+</g>
+<g id="NiveauB">
+	<path fill="#231F20" d="M198,118c0,0-41-3-45,34s17,93,36,76s18-38,13-53S214,116,198,118z"/>
+	<path fill="#231F20" d="M308,261c-30,11-54,26-30,37s32-1,41-17S308,261,308,261z"/>
+	<path fill="#231F20" d="M432,155c-23.258,13.567-42,68-13,68s67-9,56-27s-28-6-32-16S444,148,432,155z"/>
+	<path fill="#231F20" d="M432,378c-23.885,3.675-29,19-23,36s-1,38,16,37s22,1,42-3s45,6,56-15s39-42-5-40S445,376,432,378z"/>
+	<path fill="#231F20" d="M237,398c11.755,29.779-96-30-107-10s0,59,19,67s54,54,68,25S222,360,237,398z"/>
+</g>
+<g id="NiveauA">
+	<text transform="matrix(1 0 0 1 77.3047 98.5273)" font-family="'MyriadPro-Regular'" font-size="61.5">1</text>
+	<text transform="matrix(1 0 0 1 443.3047 92.5273)" font-family="'MyriadPro-Regular'" font-size="61.5">2</text>
+	<text transform="matrix(1 0 0 1 90.3047 291.168)" font-family="'MyriadPro-Regular'" font-size="51.75">3</text>
+	<text transform="matrix(1 0 0 1 431.3047 285.168)" font-family="'MyriadPro-Regular'" font-size="51.75">4</text>
+	<text transform="matrix(1 0 0 1 84.3047 445.168)" font-family="'MyriadPro-Regular'" font-size="51.75">5</text>
+	<text transform="matrix(1 0 0 1 420.3047 459.168)" font-family="'MyriadPro-Regular'" font-size="51.75">6</text>
+</g>
+</svg>

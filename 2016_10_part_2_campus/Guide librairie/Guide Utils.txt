@@ -1,0 +1,384 @@
+RPE UTILS 1.17.5.1
+--------------------
+
+Constante
+----------------
+final float PHI = (1 + sqrt(5))/2; //a number of polys use the golden ratio...
+final float ROOT2 = sqrt(2); //...and the square root of two, the famous first irrationnal number by Pythagore
+final float EULER = 2.718281828459045235360287471352; // Constant d'Euler
+
+Random
+-----------
+float random_gaussian(float value)
+> return random value smooth around the target, lige gaussian curve. 
+
+Table method 
+------------
+BUILD
+void buildTable(Table table, TableRow [] tableRow, String [] col_name, String [] row_name) ;
+void buildTable(Table table, String [] col_name) ;
+build your table with the collumn name that you need until 7 col, the first is always for the data type.
+Be caraful, used the method in the SETUP()
+
+
+SET
+void setTable(Table table, TableRow [] rows, Info_obj... info) 
+add rows with info that you need.
+Here we use the Class Info_obj to put every thing what you need in each row, no matter if it's String, float, int...
+the first param of Info is in String and be use in the first col, the other are Object type and be use in the next col.
+
+
+void setRow(Table table, Info_obj info)
+Set a specific row.
+
+
+
+print tempo
+---------
+printTempo(int tempo, Object... var) ;
+Parameters
+tempo : it's frequence of printl in frame
+var : it's your variables must be write in the println
+
+
+
+Dict Info
+------------
+Generic Dict_list
+--
+Object
+Info_dict your_dict = new Info_dict() ;
+
+Be careful Info_dict return only var of type Object, so before use you must check the type before cast it.
+Plus the method get_a() don't work in Dict_list, instead use catch_a()
+
+Special Dict_list
+--
+Integer
+Info_int_dict your_dict = new Info_int_dict() ;
+
+Float
+Info_float_dict your_dict = new Info_float_dict() ;
+
+String
+Info_String_dict your_dict = new Info_String_dict() ;
+
+Vec
+Info_Vec_dict your_dict = new Info_Vec_dict() ;
+
+
+
+
+add value
+--
+dict.add(String name, Type var) ;
+from '1' var... to '6' vars
+your_dict.add(String name, Type var, Type var, Type var, Type var, Type var, Type var) ;
+
+read value
+--
+your_dict.read() ;
+> return the name, the vars and the type of var used
+
+get value
+--
+your_dict.get("name")) ;
+> return Array list of info with the target name
+
+your_dict.get(-1)) ;
+> return Object info
+
+remove Info
+--
+your_dict.remove("name") ;
+> remove all entries with this entry name
+
+your_dict.remove(0) ;
+>remove this entry from the list
+
+clear
+--
+your_dict.clear() ;
+>empty the list
+
+
+
+
+Info
+------
+class structure and build to return  :
+String + String(s) / String + int(s) / String + float(s) / String + Vec(s) / String + Object(s)
+
+call like that :
+Info info = new Info(String name, float a, ...)
+
+you can also build the class with
+Info_String,
+Info_float,
+Info_int,
+Info_Vec,
+Info_obj,
+
+like that 
+Info info = new Info_int(String name, float a)
+Info info = new Info_String(String name, float a)
+Info info = new Info_float(String name, float a)
+Info info = new Info_obj(String name, float a)
+
+Nota Bene :
+Special use for Info_obj
+you can use Info_obj with the class Vec to split the Vec in different info case, to do that
+we must use only one Vec param :
+  Info_obj info = new Info_obj("name", Vec3(5)) ;
+  println(info) ; // [ name: 5.0, 5.0, 5.0 ]
+
+
+You can catch the value with
+your_info.catch_a()
+your_info.catch_b()
+your_info.catch_c()
+your_info.catch_d()
+your_info.catch_e()
+your_info.catch_f()
+>return a var from type Object
+
+You can also get the value with
+your_info.get_a()
+your_info.get_b()
+your_info.get_c()
+your_info.get_d()
+your_info.get_e()
+your_info.get_f()
+>return a var from type that you use to build
+
+
+can work with float, int, String and Vec class
+
+Info(String name, type a) 
+Info(String name, type a, type  b) 
+Info(String name, type  a, type  b, type  c) 
+Info(String name, type  a, type  b, type  c, type  d) 
+Info(String name, type  a, type  b, type  c, type  d, type  e) 
+Info(String name, type  a, type  b, type  c, type  d, type  e, type f) 
+
+if you mix different type of var in you Constructor, the class considere all param like Object type.
+
+
+
+
+
+
+
+
+
+
+Processing renderer
+-------------------
+
+String get_renderer_name(getGraphics()
+@ return String
+> give the name of the rendering mode
+
+boolean renderer_P3D()
+@ return boolean
+> retrun true if the mode is P3D
+
+
+
+
+
+
+
+
+
+MAP
+----
+float map_cycle(float value, float min, float max)
+@ return value who restart from the min value, when the value is over tha maximum.
+
+float map_locked(float value, float sourceMin, float sourceMax, float targetMin, float targetMax)
+@ return value who is locked when the value is over the maximum or the minimum
+
+float map_smooth(float value, float sourceMin, float sourceMax, float targetMin, float targetMax, int level)
+@ return float value with non linear curve for the start and the end, like "S", use level value to change the curve
+
+float map_smooth_start(float value, float sourceMin, float sourceMax, float targetMin, float targetMax, int level)
+@ return float value with non linear curve from start, use level value to change the curve
+
+
+float map_smooth_end(float value, float sourceMin, float sourceMax, float targetMin, float targetMax, int level)
+@ return float value with non linear curve to end, use level value to change the curve
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+String
+---------
+
+longest in letter
+--
+int longest_word( String[] listWordsToSort, int start, int finish )
+@ return int
+> return the num of char of the longest word in specific part of list
+
+longest in pixel
+--
+int longest_word_in_pixel(String[] listWordsToSort, int size_font)
+@ return int
+> return the size in pixel of the longest word
+
+int longest_word_in_pixel( String[] listWordsToSort, int size_font, int start, int finish )
+@ return int
+> return the size in pixel of the longest word in specific part of list
+
+
+Longest in pixel with different size of font by line
+--
+int longest_word_in_pixel( String[] listWordsToSort, int [] size_font)
+@ return int
+> return the size in pixel of the longest word, with a specific size of font for each line
+
+int longest_word_in_pixel( String[] listWordsToSort, int [] size_font, int start, int finish )
+@ return int
+> return the size in pixel of the longest word, with a specific size of font for each line in specific part of list
+
+
+
+
+length in pixel of String or char
+--
+int width_String(String target, int size) ;
+> use default font
+
+int width_String(String font_name, String target, int size) ;
+
+@return width in pixel of target String
+
+int width_String(char target, int size) ;
+> use default font
+
+int width_String(String font_name, char target, int size) ;
+
+@return width in pixel of target String
+
+
+
+
+
+
+split
+--
+String [] split_text(String textToSplit, String separator)
+@ return array String
+
+int longestWord( String[] listWordsToSort)
+@ return int
+> return the num of char of the longest word
+
+
+join
+--
+String join_int_to_String(int []data, String separator) 
+@ return String
+> return a simple String with data int, with the separator of your choice
+
+String join_int_to_String(float []data, String separator) 
+@ return String
+> return a simple String with data float, with the separator of your choice
+
+
+
+
+Check
+--
+boolean research_in_String(String research, String target)
+@ return boolean
+> return true if a specific String is in the String target
+
+
+String object_type(Object t)
+@return String
+> return the name of the type var you send, can be use with generic var like Object
+
+
+
+
+
+float
+--
+String float_to_String_1(float data) 
+String float_to_String_2(float data) 
+String float_to_String_3(float data) 
+String float_to_String_4(float data) 
+@translate a float to String with "1" float or with "4", weird must look inside
+
+
+int
+--
+String int_to_String(int data) 
+@translate an Integer in String
+
+
+remove
+--
+String remove_part_String(String research, String target) 
+@return a String without the part of your choice, if it's possible. If it's not possible return info to explain.
+
+
+research
+--
+boolean research_in_String(String research, String target) 
+@return a boolean if String is find in an other String
+
+
+
+
+file name
+--
+String file_name(String s)
+@return the last part of String by spliting path method
+
+
+
+
+
+
+
+
+
+Misc
+-------
+float truncate( float x )
+@ return float
+> return float with two decimals
+
+
+FLOAT
+--
+float to string
+--
+String float_to_String_1(float data)
+String float_to_String_2(float data)
+String float_to_String_3(float data)
+@ return String
+> return String with one, two or three decimal
+
+
+
+

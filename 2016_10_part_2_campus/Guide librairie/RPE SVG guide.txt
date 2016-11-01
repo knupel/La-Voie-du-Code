@@ -1,0 +1,180 @@
+/**
+Class RPEsvg 1.2.0
+* @author Stan le Punk
+* @see other Processing work on https://github.com/StanLepunK
+* 2016-2016
+*/
+
+// FIRST, build your SVG vertex
+--------------------------------
+create your Object
+--
+RPEsvg svg ;
+
+Init your object
+--
+String path = "pirate_couleur.svg" ;
+> to load your object
+String name = "pirate" ;
+> name use to create a specific folder to stock the SVG brick
+
+CONSTRUCTOR
+--
+svg = new RPEsvg(PApplet p5, String path, String name) ;
+RPEsvg(PApplet p5, String path)
+
+
+
+svg.build() ;
+> create your shape, the adress to load the orginal svg is equal to place where the brick is saved
+
+svg.build(String path_import, String path_brick) ;
+> use this method if the address is different between the load and the saved
+
+
+
+// SET SVG
+svg.svgMode(int mode)
+@ choice between CENTER or CORNER, this two parameter is a global variable from Processing
+
+
+// SHOW YOUR SVG
+-----------------
+
+CHANGE
+-------
+Permanente change
+--
+
+svg.add_def(int ID, Vec3 [] value)
+> You can add value to your original list of point, this list of value is add in the order to the original. This effect is permanent.
+For the shape with path or polygone all the points list will be change, pro the primitive ellipse, circle and rect it's position will be change.
+
+
+Temporary change 
+--
+method, place before svg.draw() method
+--
+svg.pos(Vec2 pos) ;
+svg.pos(float x, float y) ;
+svg.pos(Vec3 pos) ;
+svg.pos(float x, float y, float z) ;
+> used to set the position of your PShape
+--
+svg.scale(Vec2 scale) ;
+svg.scale(float x, float y) ;
+svg.scale(Vec3 scale) ;
+svg.scale(float x, float y, float z) ;
+> used to scale your shape, the value 1. is a full size
+--
+svg.jitter(Vec2 jitter) ;
+svg.jitter(int x, int y) ;
+svg.jitter(Vec3 jitter) ;
+svg.jitter(int x, int y, int z) ;
+> used to add a jitting effect on your point
+
+
+ASPECT
+--
+svg.original_style(boolean fill_original, boolean stroke_original) ;
+svg.original_fill(boolean fill_original) ;
+svg.original_stroke(boolean fill_original) ;
+> to enable or disable the original aspect fill and stroke
+
+to set the color and the thickness of your brick SVG, the componenet color must be normalize > 0 to 1
+--
+svg.fill(float x, float y, float z, float a) ; 
+svg.stroke(float x, float y, float z, float a) ; 
+svg.fill(Vec4 c) ; 
+svg.stroke(Vec4 c) ; 
+svg.strokeWeight(float x) ; 
+
+
+to factor color value
+--
+svg.fill_factor(float x, float y, float z, float a) ; 
+svg.fill_factor(Vec4 f) ; 
+svg.stroke_factor(float x, float y, float z, float a) ; 
+svg.stroke_factor(Vec4 f) ; 
+
+
+DISPLAY
+------------------
+Full
+--
+svg.draw_2D () ;
+svg.draw_3D () ;
+
+Display a part of your SVG file,
+--
+Each shape is decompose in the smallest part, you can check the ID or the name with different method to call the list of brick SVG.
+Usually the name used for the brick from the layer name.
+--
+svg.draw_2D (int ID) ;
+svg.draw_3D (int ID) ;
+
+svg.draw_2D (String name) ;
+svg.draw_3D (String name) ;
+
+
+Whith the part SVG, you can use the method start() and end() to use the all the method change on the bricks of your choice.
+--
+svg.start() ;
+> note : the method start is not an obligation, because the methods change and original_style active the modification, but only for the next brick, if you want keep the modification for more brick you must use start() and end()
+--
+svg.end() ;
+
+
+
+
+
+
+
+
+
+// INFO
+////////
+int Info
+--
+svg.num_brick()
+> return the num of elements of your SVG
+
+
+
+Float info
+--
+svg.width()
+svg.width(int target)
+> return the width of your SVG, if this one is be loaded
+
+svg.height_SVG()
+svg.height_SVG(int target)
+> return the height of your SVG, if this one is be loaded
+
+svg.canvas_SVG()
+svg.canvas_SVG(int target)
+> return the width and the height of your SVG in Vec2, if this one is be loaded
+
+
+String info
+--
+svg.name() ; 
+> return String with the name given in your declaration.
+--
+svg.name_brick() ; 
+svg.family_brick() ;
+svg.kind_brick() ;
+> return String list
+
+svg.name_brick(ID)) ;
+svg.family_brick(ID)) ;
+svg.kind_brick(ID)) ;
+> return String
+
+
+Vec3 list point of interest, like position or vertex coord
+--
+svg.list_points_of_interest(ID)) ;
+> return Vec3 list
+
+
