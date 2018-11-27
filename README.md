@@ -1,4 +1,4 @@
-# La-Voie-du-Code
+# La Voie du Code
 
 Ici Vous trouverez un ensemble de sketch pour vous initier à la Voie du Code via le l'application Processing
 
