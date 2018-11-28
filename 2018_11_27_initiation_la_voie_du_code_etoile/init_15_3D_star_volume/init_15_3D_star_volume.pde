@@ -12,7 +12,7 @@ float rotate_x = 0;
 float rotate_y = 0;
 float rotate_z = 0;
 void draw() {
-  background(0,0,100);
+  background(0,0,80);
   aspect();
   
   PVector offset = new PVector();
@@ -32,15 +32,14 @@ void draw() {
 
 
 void aspect() {
-  fill(255,255,0);
-  stroke(255,0,0);
-  strokeWeight(5);
+  fill(255,255,0,150);
+  stroke(255,0,0,150);
+  strokeWeight(1);
 }
 
 
 
 int num = 10;
-PVector [] pts = new PVector[num];
 PVector [] pos = new PVector[num];
 void few_points() {
   float angle = TAU / num;
@@ -54,15 +53,15 @@ void few_points() {
   
   // position
   for(int i = 0 ; i < num ; i++) {
-    if(pts[i] == null) pts[i] = new PVector();
     if(pos[i] == null) pos[i] = new PVector();
     float final_angle = (angle*i)+start_angle;
-    pts[i].x = cos(final_angle);
-    pts[i].y = sin(final_angle);
+    float cos_x = cos(final_angle);
+    float sin_y = sin(final_angle);
+
     float temp_diam = diam;
     if(i%2 == 0) temp_diam = diam *ratio;
-    pos[i].x = (temp_diam * pts[i].x);
-    pos[i].y = (temp_diam * pts[i].y);
+    pos[i].x = (temp_diam * cos_x);
+    pos[i].y = (temp_diam * sin_y);
   }
   
   PVector barycenter = new PVector();

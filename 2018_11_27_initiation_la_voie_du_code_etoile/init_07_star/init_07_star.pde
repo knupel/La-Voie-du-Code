@@ -17,7 +17,6 @@ void draw() {
 }
 
 int num = 10;
-PVector [] pts = new PVector[num];
 void few_points() {
   float angle = TAU / num;
   int diam = 50;
@@ -26,15 +25,14 @@ void few_points() {
   offset.y = height/2;
     
   for(int i = 0 ; i < num ; i++) {
-    if(pts[i] == null) pts[i] = new PVector();
     float final_angle = angle*i;
-    pts[i].x = cos(final_angle);
-    pts[i].y = sin(final_angle);
+    float cos_x = cos(final_angle);
+    float sin_y = sin(final_angle);
     PVector pos = new PVector();
     int temp_diam = diam;
     if(i%2 == 0) temp_diam = diam/2;
-    pos.x = (temp_diam * pts[i].x);
-    pos.y = (temp_diam * pts[i].y);
+    pos.x = (temp_diam * cos_x);
+    pos.y = (temp_diam * sin_y);
     
     pos.add(offset);
     strokeWeight(3);
