@@ -1,8 +1,12 @@
-
+/**
+La Voie du Code : grille
+@see https://github.com/StanLepunK/La-Voie-du-Code
+2018_12_4
+*/
 PVector [] pts ;
 void setup() {
   size(400,400);
-  int num = 20;
+  int num = 5;
   int cell_size = width/num;
   int offset_x = cell_size/2;
   int offset_y = cell_size/2;
@@ -31,7 +35,20 @@ void draw() {
     } else {
       fill(0);
     }
-    rect_motion(pts[i].x,pts[i].y,size_rect,angle);
+    boolean detect = detection(mouseX,mouseY,pts[i].x,pts[i].y,50);
+    if(detect == true) rect_motion(pts[i].x,pts[i].y,size_rect,angle);
+  }
+}
+
+boolean detection(float x, float y, float target_x, float target_y, int range) {
+  float min_x = target_x -range;
+  float max_x = target_x +range;
+  float min_y = target_y -range;
+  float max_y = target_y +range;
+  if(x > min_x && x < max_x && y > min_y && y < max_y) {
+    return true ;
+  } else {
+    return false;
   }
 }
 

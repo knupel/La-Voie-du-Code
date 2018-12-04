@@ -1,3 +1,8 @@
+/**
+La Voie du Code : grille
+@see https://github.com/StanLepunK/La-Voie-du-Code
+2018_12_4
+*/
 void setup() {
   size(400,400);
   strokeWeight(10);
