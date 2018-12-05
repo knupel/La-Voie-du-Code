@@ -6,7 +6,7 @@ La Voie du Code : grille
 PVector [] pts ;
 void setup() {
   size(400,400);
-  int num = 5;
+  int num = 50;
   int cell_size = width/num;
   int offset_x = cell_size/2;
   int offset_y = cell_size/2;
@@ -30,13 +30,14 @@ void draw() {
   angle += .02;
   noStroke();
   for(int i = 0 ; i < pts.length ; i++) {
-    if(i%2 ==0) {
-      fill(255);
+    if(i%7 ==0) {
+      fill(255,100);
     } else {
       fill(0);
     }
-    boolean detect = detection(mouseX,mouseY,pts[i].x,pts[i].y,50);
-    if(detect == true) rect_motion(pts[i].x,pts[i].y,size_rect,angle);
+    //boolean detect = detection(mouseX,mouseY,pts[i].x,pts[i].y,50);
+   // if(detect == true) 
+      rect_motion(pts[i].x,pts[i].y,size_rect,angle);
   }
 }
 
