@@ -1,0 +1,70 @@
+Pixel [] pixel;
+void setup() {
+	size(640,480);
+  colorMode(HSB,360,100,100,100);
+  int num_x = 30;
+  int num_y = 30;
+  int total = num_x *num_y;
+  pixel = new Pixel[total];
+
+  float size_x = width/(float)num_x;
+	float size_y = height/(float)num_y;
+
+	float couleur = 0;
+	float blanc = 100;
+	float noir = 0;
+  int count = 0;
+
+  float step_couleur = g.colorModeX / num_x ;
+  float step_noir = g.colorModeZ / num_y ;
+  for(int x = 0 ; x < num_x ; x++) {
+  	couleur += step_couleur;
+  	for(int y = 0 ; y < num_y ; y++) {
+  		pixel[count] = new Pixel();
+  		float pos_x = x *size_x;
+  		float pos_y = y *size_y;
+  		pixel[count].set_position(pos_x,pos_y);
+  		noir = y *step_noir;
+  		pixel[count].set_color(couleur,blanc,noir);
+      pixel[count].set_size(size_x,size_y);
+  		count++;
+
+  	}
+  }   
+}
+
+
+void draw() {
+  for(int i = 0 ; i < pixel.length ; i++) {
+    if(pixel[i] != null) {
+      fill(pixel[i].cx,pixel[i].cy,pixel[i].cz);
+      rect(pixel[i].x,pixel[i].y,pixel[i].w,pixel[i].h);  
+    }
+  }
+  
+  // interaction
+  if(mousePressed && target != null) {
+    for(int i = 0 ; i < target.length ; i++) {
+      float x =  pixel[target[i]].x ;
+      float y =  pixel[target[i]].y ;
+      x += random(-10,10);
+      y += random(-10,10);
+      pixel[target[i]].set_position(x,y);
+    }
+
+  }
+
+}
+
+int [] target ;
+void keyPressed() {
+  int num = (int)random(pixel.length/2);
+  target = new int[num];
+  for(int i = 0 ; i < target.length ; i++) {
+    target[i] = floor(random(pixel.length));
+  }
+}
+
+
+
+
