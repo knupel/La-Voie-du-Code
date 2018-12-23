@@ -1,3 +1,8 @@
+/**
+La Voie du Code : Color palette
+@see https://github.com/StanLepunK/La-Voie-du-Code
+2018_12_18
+*/
 void setup() {
 	size(640,480);
 	int num_x = 3;
