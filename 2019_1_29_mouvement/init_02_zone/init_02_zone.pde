@@ -3,12 +3,12 @@ La Voie du Code : Mouvement
 @see https://github.com/StanLepunK/La-Voie-du-Code
 2019_1_29
 */
-float vitesse = 0.5;
+float vitesse = 2;
 PVector heros;
 void setup() {
   size(500,500);
-  float x = random(width);
-  float y = random(height);
+  float x = random(width/2);
+  float y = random(height/2);
   heros = new PVector(x,y);
 }
 

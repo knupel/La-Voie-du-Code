@@ -7,8 +7,8 @@ float vitesse = 0.5;
 PVector heros;
 void setup() {
   size(500,500);
-  float x = random(width);
-  float y = random(height);
+  float x = random(width/2);
+  float y = random(height/2);
   heros = new PVector(x,y);
 }
 

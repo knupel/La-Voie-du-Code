@@ -18,11 +18,12 @@ void setup() {
 
 
 boolean color_effect_is = false;
+float angle;
 void draw() {
   if(reset_is) {
     reset();
   }
-  background(0);
+  // background(0);
 
   heros.update();
 
@@ -37,9 +38,11 @@ void draw() {
   int ty = (int)heros.get_absolute_position().y;
   if(mx == tx && my == ty) {
     println("BOUM",frameCount);
+    // angle = angle(mouse,heros.get_absolute_position());
+    heros.set_direction(angle+PI);
   } else { 
     println("BIM BAM",frameCount);
-    float angle = angle(mouse,heros.get_absolute_position());
+    angle = angle(mouse,heros.get_absolute_position());
     heros.set_direction(angle+PI);
   }
 
@@ -58,12 +61,12 @@ void draw() {
 
   // comportement
   float diam = 50;
-  float x = 50;
-  float y = 50;
-  /*
+  // float x = 50;
+  // float y = 50;
+  
   float x = cos(frameCount *.01)*diam;
   float y = sin(frameCount *.01)*diam;
-  */
+  
   heros.set_offset(x,y,true);
 
 
