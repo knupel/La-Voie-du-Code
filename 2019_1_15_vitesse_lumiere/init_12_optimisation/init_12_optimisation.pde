@@ -5,7 +5,8 @@ La Voie du Code : Vitesse lumière
 */
 int canvas ;
 void setup() {
-  size(640,480,P3D);
+  // fullScreen(P3D,2);
+  size(800,600,P3D);
   colorMode(HSB,360,100,100,100);
   background(0);
   canvas = 3*width;
@@ -16,17 +17,18 @@ void setup() {
 
 boolean bang = false;
 void draw() {
+  cursor(CROSS);
   // afficher des étoiles
   // espace(0,0,0,100);
   
   if(speed_vaisseau < 30) {
-    espace(0,0,0,5);
+    espace(245,95,15,5);
   } else {
     if(bang == false) {
       background(0,0,100);
       bang = true;   
     } else {
-      espace(0,0,100,10);
+      espace(245,95,15,5);
     }
   }
   
@@ -52,7 +54,7 @@ void draw() {
   }
   popMatrix();
   
-  vaisseau(.01);
+  vaisseau(0.02);
   
   // info
   println("vitesse",(int)speed_vaisseau);
@@ -63,9 +65,11 @@ void draw() {
 
 
 
+
+
 void keyPressed() {
   if(key == 'n') {
-    int num = (int)random(100,10000);
+    int num = (int)random(1000,30000);
     generateur(num,canvas);
     speed_vaisseau = 0;
     background(0);

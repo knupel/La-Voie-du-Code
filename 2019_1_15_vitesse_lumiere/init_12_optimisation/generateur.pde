@@ -12,10 +12,10 @@ void generateur(int num, int canvas) {
     float z = random(-canvas,canvas);
     PVector position = new PVector(x,y,z);
     float couleur = random(360);
-    float lumiere = random(0,10);
+    float lumiere = random(0,20);
     float densite = random(90,100);
     PVector aspect = new PVector(couleur,lumiere,densite);
-    float taille = random(10);
+    float taille = random(15);
     etoile[i] = new Etoile(position,taille,aspect); ;
   }
 }
