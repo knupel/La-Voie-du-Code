@@ -3,21 +3,21 @@ La Voie du Code : rotation
 @see https://github.com/StanLepunK/La-Voie-du-Code
 2019_2_12
 */
-int colonne = 12;
-int ligne = 12;
+int colonne = 9;
+int ligne = 9;
 Animator [] ani = new Animator[colonne *ligne];
 void setup() {
-  size(900,900);
+  size(300,300);
   colorMode(HSB,360,100,100,100);
   for(int i = 0 ; i < ani.length ; i++) {
     ani[i] = new Animator();
     ani[i].set_vitesse(random(1)*.1);
-    ani[i].set_radius(30);
+    ani[i].set_radius(random(width/3),random(height/3));
   }
 }
 
 void draw() {
-  mon_background(0,5); 
+  mon_background(0,30); 
   int cell_x = width/colonne;
   int cell_y = height/ligne;
   int offset_x = cell_x/2;
@@ -42,7 +42,8 @@ void draw() {
 class Animator {
   float dir;
   float vit;
-  float rad;
+  float rx;
+  float ry;
 
   Animator() {}
 
@@ -50,8 +51,9 @@ class Animator {
     this.vit = vit;
   }
 
-  void set_radius(float rad) {
-    this.rad = rad;
+  void set_radius(float rx, float ry) {
+    this.rx = rx;
+    this.ry = ry;
   }
 
   void update() {
@@ -73,7 +75,8 @@ class Animator {
     float px = cos(dir);
     float py = sin(dir);
     PVector pos  = new PVector(px,py);
-    pos.mult(rad);
+    pos.x *= rx;
+    pos.y *= ry;
     push();
     translate(x,y);
     point(pos.x,pos.y);
