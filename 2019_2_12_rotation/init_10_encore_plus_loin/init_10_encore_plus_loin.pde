@@ -7,7 +7,7 @@ int colonne = 18;
 int ligne = 18;
 Animator [] ani = new Animator[colonne *ligne];
 void setup() {
-  size(900,900);
+  size(300,300);
   colorMode(HSB,360,100,100,100);
   float min = 10;
   float radius_x = width/3;

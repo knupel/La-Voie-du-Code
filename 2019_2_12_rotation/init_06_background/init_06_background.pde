@@ -7,7 +7,7 @@ int colonne = 12;
 int ligne = 12;
 Animator [] ani = new Animator[colonne *ligne];
 void setup() {
-  size(900,900);
+  size(300,300);
   colorMode(HSB,360,100,100);
   for(int i = 0 ; i < ani.length ; i++) {
     ani[i] = new Animator();
