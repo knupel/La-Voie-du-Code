@@ -13,7 +13,8 @@ void setup() {
     nouveau_texte += (mot[cible] + " ");
   }
   String chemin_relatif = "data/";
-  String nom_fichier = "mon_poème_" + year() + "_" +month() + "_" + day() + "_" + hour() + "_" + minute() + "_" +second();
+  String date = year() + "_" +month() + "_" + day() + "_" + hour() + "_" + minute() + "_" +second();
+  String nom_fichier = "mon_poème_" + date;
   String extension = "txt";
   String []save = {" ",nouveau_texte};
   String chemin = chemin_relatif+nom_fichier + "."+ extension;
