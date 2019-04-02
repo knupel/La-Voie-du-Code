@@ -22,4 +22,8 @@ void setup() {
   // note: on utilise un array car il est créé une séquence par paragraphe.
   String [] str_ext = loadStrings("voyager.txt");
   printArray(str_ext);
+
+  // comparer deux textes
+  println("résultat:",str_a.equals(str_b));
+  println("résultat:",str_a.equals(str_a));
 }
