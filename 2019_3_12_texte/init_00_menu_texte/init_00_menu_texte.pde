@@ -3,7 +3,6 @@ La Voie du Code : basic of the day
 @see https://github.com/StanLepunK/La-Voie-du-Code
 2019_3_12
 */
-
 void setup() {
   size(300,300);
   String phrase = "Voyager c'est bien utile";
