@@ -41,7 +41,7 @@ class Forme {
       
       vertex(temp.x +pos_x,temp.y +pos_y);
     }
-    endShape();
+    endShape(CLOSE);
   }
   
   void set_rayon(float rayon) {

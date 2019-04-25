@@ -7,7 +7,11 @@ Forme forme ;
 void setup() {
   size(300,600);
   forme = new Forme(20);
-  forme.set_rayon(50,10);
+  float [] r = new float[(int)random(2,forme.pts.length)];
+  for(int i = 0 ; i < r.length ; i++) {
+    r[i] = random(0,width);
+  }
+  forme.set_rayon(r);
 }
 
 
