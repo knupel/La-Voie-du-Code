@@ -11,14 +11,15 @@
 
 PImage img;
 void setup() {
-  size(640,480,P3D);
+  size(640,480,P2D);
   img = loadImage("medium_puros_girl.jpg");
 }
 
 void draw() {
   background(img,SCREEN);
-  boolean on_g = true;
-  vec3 strength = vec3().sin_wave(frameCount,.1).mult(50);
-  int num = 10;
-  fx_blur_circular(g,on_g,strength,num);
+  //boolean on_g = true;
+  float vitesse = map(mouseX,0,width,0,.5);
+  vec3 strength = vec3().sin_wave(frameCount,vitesse).mult(30);
+  int num = 3;
+  fx_blur_circular(g,true,strength,num);
 }

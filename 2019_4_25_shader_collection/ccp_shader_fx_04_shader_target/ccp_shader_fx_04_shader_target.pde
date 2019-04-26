@@ -18,12 +18,13 @@ void setup() {
 void draw() {
   background(img,SCREEN);
   item();
-  vec3 strength = vec3().sin_wave(frameCount,.01).mult(100);
+  vec3 strength = vec3().sin_wave(frameCount,.01).mult(20);
   int num = 10;
   if(mousePressed) {
     fx_blur_circular(g,true,strength,num);
   } else {
-    image(fx_blur_circular(img,false,strength,num));
+    PImage temp = fx_blur_circular(img,false,strength,num);
+    image(temp);
   }
 }
 
