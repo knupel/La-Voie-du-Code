@@ -30,7 +30,7 @@ void draw() {
 
 
   vec4 curtain = abs(vec4().sin_wave(frameCount,.01)).mult(.5); // use to hide a part of picture
-  curtain.set(0);
+  // curtain.set(0); // no curtain is used
   int mode = r.SCALE; // you can also use SCREEN or CENTER
 
   /**
@@ -50,7 +50,3 @@ void draw() {
   // PImage temp = fx_image(img,false,pos,scale,colour_bg,curtain,mode);
   // image(temp);
 }
-
-
-
-
