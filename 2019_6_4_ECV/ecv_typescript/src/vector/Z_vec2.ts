@@ -1,6 +1,6 @@
 /**
 * vec2 class
-* v 0.0.1
+* v 0.0.2
 * 2019-2019
 * Vector class with a number precision
 * @author @stanlepunk
