@@ -17,9 +17,8 @@ var sketch = (p: p5) => {
   }
   // setting 
   p.setup = () => {
-    // p.createCanvas(p.windowWidth, p.windowHeight);
+    // p.createCanvas(p.windowWidth, p.windowHeight); > that create a bug at the beginning
     p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL);
-    // p.colorMode(p.HSB,360,100,100,100);
 
     w = p.windowWidth;
     h = p.windowHeight;
@@ -27,10 +26,11 @@ var sketch = (p: p5) => {
     cell_y = h / rows;
     let offset_x:number = cell_x / 2;
     let offset_y:number = cell_y / 2;
-    p.print(w+" "+h);
+    let offset = new vec2(w/2,h/2);
     for(let y:number = 0 ; y < rows ; y++) {
-      for(let x:number = 0 ; x < cols ; x++) {
+      for(let x:number = 0 ; x < cols ; x++) {   
         var temp = new vec2(x *cell_x +offset_x,y *cell_y +offset_y);
+        temp.sub(offset.x(),offset.y());
         list.push(temp);
       }
     }    
@@ -46,6 +46,7 @@ var sketch = (p: p5) => {
   let count = 0;
   p.draw = () => {
     p.background(255,0,0);
+    
  
     if(count >= list.length) {
       count = 0;
@@ -78,7 +79,9 @@ var sketch = (p: p5) => {
       }
       let b = new vec2(list[target_b].x(),list[target_b].y());
       // condition to link the points
-      if(i%cols != cols-1) p.line(a.x(),a.y(),b.x(),b.y());
+      if(i%cols != cols-1) {
+        p.line(a.x(),a.y(),b.x(),b.y());
+      }
     }
     count++;
 
@@ -92,9 +95,6 @@ var sketch = (p: p5) => {
   p.keyReleased = () => {
     key_pressed = false;
   }
-
-
-
 }
 
 // var sketchP = new p5(sketch);
