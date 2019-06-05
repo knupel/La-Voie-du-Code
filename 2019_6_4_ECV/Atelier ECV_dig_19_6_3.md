@@ -1,12 +1,12 @@
 *Atelier Code créatif ECV-digital Aix-en-Provence
 
 2019-2019
-v 0.0.3
+v 0.0.5
 
 
 *SEMAINE 1
 
-*Session 1 : élève + intervenant
+*Session 1 : élèves + intervenant
 
 Présentation de l'intervenant
 
@@ -23,21 +23,21 @@ https://processing.org/
 http://p5js.org/
 https://editor.p5js.org/
 
-Atelier Code, soit avec Processing ou avec P5 encore à définir.
-1 / Présentation : les méthodes de Processing, qui sont valable dans Processing et P5.
+1 / Présentation : Processing.
 
-2 / Code : Utilisation des boucles pour créer des motifs et des animations.
+2 / Code Processing : La vérité entre 0 et 1 ou l'art du sinus et du cosinus
 
-3 / Code : Paramétrage ou la vérité entre 0 et 1.
+3 / Code P5 : les boucles pour créer des motifs.
 
-*Session 2 : élève + intervenant
+
+*Session 2 : élèves + intervenant
 
 1 / Présentation : TypeScript, webpack et NPM pour utiliser P5.js et rendre un code intégrable sur un site.
 https://www.typescriptlang.org/
 https://webpack.js.org/guides
 https://www.npmjs.com/
 
-1 / Code : Passer le code du matin dans TypeScript / P5.
+1 / Code : Passer le code P5.JS du matin dans TypeScript puis de le transpiler en JavaScript.
 
 2 / Code : Mini-projet en Processing, réalisation d'un environnement 3D avec des particules avec utilisation de la programmation orienté objet.
 
@@ -45,7 +45,7 @@ https://www.npmjs.com/
 
 *SEMAINE 2
 
-*Session 3 : élève + intervenant
+*Session 3 : élèves + intervenant
 
 1/ Evaluation
 
@@ -53,7 +53,7 @@ https://www.npmjs.com/
 
 3 / Présentation : d'autre principe de code créatifs : Les champs de vecteurs 2D et 3D.
 
-*Session 4 : élève + intervenant
+*Session 4 : élèves + intervenant
 
 1 / Présentation des shaders et du GLSL.
 
@@ -63,9 +63,9 @@ https://www.npmjs.com/
 
 Intervention externe.
 
-*session 5 : élève + intervenant
+*session 5 : élèves + intervenant
 
-1 / Code où je suis là en soutien
+1 / Code : où je suis là en soutien
 
 
 *session 6 : intervenant

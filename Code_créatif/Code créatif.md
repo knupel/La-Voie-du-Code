@@ -1,7 +1,7 @@
 *Présentation du Code créatif
 
 2019-2019
-v 0.0.2
+v 0.0.3
 
 
 *principe
@@ -34,6 +34,13 @@ L'algorithmie ou l'art d'écrire des algorithmes est le pivot du code créatif, 
 *histoire
 
 
+Préhistoire
+Trace de main avec peinture soufflée
+
+Antiquité
+Les machines de guerre était capable de faire du Land-Art en détruisant les villes voisines !
+Feux d'artifice chez les chinois.
+
 1400
 Johannes Gutenberg
 
@@ -50,10 +57,14 @@ Charles Babbage > La machine à différence... le premier ordinateur ?
 Ada Lovelace > écrit le premier programme de l'histoire de l'humanité.
 
 1940
-Alan Turing > Machine de Turing
+Alan Turing > Machine de Turing > Test de Turing
+
+1950
+Azimov : Les trois lois de la robotique
 
 1960
 Les Algoristes
+Mouvement Fluxus
 
 1970
 John Horton Conway > Jeu de la vie ou Automata
@@ -81,8 +92,21 @@ RayMarching
 
 *Algorithme
 
-Equation : Voronoi, Navier-Stoke, Mandelbrot, Bruit de Perlin, Fourrier
-Comportement : boids, Jeu de la vie, 
+Ici quelques idée de source pour créer avec du code :
+
+Equation : 
+trigonométrie, Voronoi, Navier-Stoke, Mandelbrot, bruit de Perlin, Fourrier...
+
+Comportement : 
+boids, Jeu de la vie...
+
+Méthode : 
+hasard, particule, raymarching, polymorphisme, structural...
+
+Analyse 
+spectre > image, son 
+Senseurs > souris, clavier, Kinect, leapmotion, température...
+Données > fichier CSV, JSON, XML, TXT...
 
 
 
@@ -90,64 +114,100 @@ Comportement : boids, Jeu de la vie,
 
 *Communauté, festival, exposition
 
-Les artistes codeur, designers codeur, artistes génératifs sont encore peu nombreux, toujours avant-garde depuis 40 ans !!! Mais grâce à internet, l'augmentation des festivals et avénement de l'ordinateur personnel cela va de mieux en mieux.
+Les artistes codeurs, designers codeur, artistes génératifs sont encore peu nombreux, toujours avant-garde depuis 40 ans !!! Mais grâce à internet, l'augmentation des festivals et avénement de l'ordinateur personnel cela va de mieux en mieux.
 Cette petite communauté qui grandit petit à petit se retrouve régulièrement soit dans des festivals, soit à travers des meetups ou des journées organisée par différence associations souvent liées de près ou de loin à Processing.
 
 Le mouvement des créatifs codeurs est très lié à la scène VJing qui s'est transformé petit à petit en scène de mapping et des performances audio-visuelle.
-Au début c'est donc dans ces festivals que les codeurs se retrouvaient, l'un des premiers grands festivals fût le Mapping Festival en Suisse, il y aussi le LPM à Rome, le Mutek, Scopitone à Nantes, Le festival des Bains-Numérique à Enghein-les-Bains, la Biénalle Némo à Paris, Festival Vision'R à Paris, Festival Gamerz à Aix-en-Procence, Resonate à Belgrad, Kikk en Belgique.
+Au début c'est donc dans ces festivals que les codeurs se retrouvaient, l'un des premiers grands festivals fût le Mapping Festival en Suisse, il y aussi le LPM à Rome, le Mutek, Scopitone à Nantes, Le festival des Bains-Numérique à Enghein-les-Bains, la Biénalle Némo à Paris, Festival Vision'R à Paris, Festival Gamerz à Aix-en-Procence, Resonate à Belgrad, Kikk en Belgique, Fiber Festival aux Pays-Bas et depuis si longtemps le festival Ars Electronica
 
 Début des années 2010 il y a eu les ateliers Processing-City lancé par Mark Webster à travers Processing Paris, maintenant remplacé par PCD - Processing Community Day piloté par la Fondation Processing.
 https://processingfoundation.org/
 
+Live Coding :
+Au niveau du son, univers que je connais moins bien, il y a quelques années est né un groupement informal appelé Algorave, rencontre de live codeur sonor retransmis en direct dans un lieu définit, mais ou les personnes ne sont pas nécessrement présente juste relié à l'événement par le réseau.
+https://www.youtube.com/watch?v=S2EZqikCIfY
+
+Et an niveau des images, on peut trouver la même soif de rencontre de codeur. En france il y a un collectif très actif à ce niveau "Cookie Collective". L'idée est de voir défilé ou s'affronter des live codeurs sous forme de match qu'un quart d'heure ou chacun des adversaire doit donner son meilleur code visuel, le langage utilisé est souvent le GLSL ou autre langage permetant des rendu de Shader.
+https://cookie.paris/
+
 En novembre dernier il y a au le premier festival entièrement consacré au code créatif le festival GROW organisé par Nicolas Barradeau ; ce festival vise à couvrir l'ensemble des technologies lié au code créatif et pas seulement Processing : cela passe par Javascript, le WebGL, Processing, Openframework, les shader, le live coding...
+https://www.grow.paris/fr/
 
 
 Le centre Georges Pompidou organise maintenant depuis trois ans les journées du code, et en 2018 il y a eu la très réussit exposition : "Coder le Monde", lors du Festival Manifeste organiser chaque année par l'Ircam.
 https://www.centrepompidou.fr/cpv/resource/cdAr58R/rnAg56a
 
-Il y a aussi des entités plus petites que vous pouvez trouver via la plateforme mmetup, comme Creative Code Paris à laquelle je participe créer par Grégory Jarrige et Fred Cecilia.
+Il y a aussi des entités plus petites que vous pouvez trouver via la plateforme meetup, comme Creative Code Paris à laquelle je participe créer par Grégory Jarrige et Fred Cecilia.
+
+
+Pour se tenir au courant de qui se passe dans le monde du code créatif, un site incontournable :
+https://www.creativeapplications.net/
+
+
+*Lieu
+
+ZKM à Karlsruhe
+https://zkm.de/en/zkmdigital
+
+MUDA, Museum of Digital Art à Zurich
+
+EyeBeam à New-York
+
+*Tendance
+
+Arduino, plotter, live coding, Détection de mouvement, Laser, VR, Réalité augmentée, Apprentissage Profond
 
 
 
 
+*personne
 
-
-
-*Personne
-
-Musique : Iannis Xenakis
+Musique : Iannis Xenakis, Ryoji Ikeda
 Design Génératif : Jonh Maeda
 Art Génératif : Casey Reas, Miguel Chevalier
 Graphisme Génératif : Joshua Davis
-Art Visuel : Antoine Schmitt, Joanie Lemercier
+Art Visuel : Antoine Schmitt, Joanie Lemercier, Adrien M. et Claire B., Ryoji Ikeda
 
-Les petits nouveaux :
-Mat DesLaurier, 
+Professeur : Daniel Shiffmann
 
+Les gens ou les groupe à connaitre :
+Mat DesLaurier, Manoloide, Cacheflowe, Raven Kwok, Mathieu Le Sourd, Memo Aken, Benedikt Groß
 
-*langage
+Les groupes : 
+OnFormative
+
+*ouvrages
+
+Generative Gestaltung - Generative Design
+http://www.generative-gestaltung.de/2/
+
+Maeda et Média : Jonh Maéda
+
+*langages
 
 Java : Processing 
 JavaScirpt : P5, ThreeJS, Babylon, PaperJS
 Python Processing Python
-C++ : Openframework, Cynder
+C++ : Openframework, Cynder, polycode
 Carte Graphique : GLSL
 Jeu : Unity
 Langage de boite : VVVV, Pura Data
 SuperCollider
 
 
-*plateforme en ligne
+*plateforme de code créatif en ligne
 
-shadertoy, sandbox, openProcessing, codePen
+openProcessing : https://www.openprocessing.org/
+codePen : https://codepen.io/#
+shadertoy : https://www.shadertoy.com/
+sandbox : http://glslsandbox.com/
 
 
 *lien
 
-https://github.com/terkelg/awesome-creative-coding
+resource : https://github.com/terkelg/awesome-creative-coding
+
+présentation Tim Holman : https://www.youtube.com/watch?v=4Se0_w0ISYk
 
 
-*lien video
-
-https://www.youtube.com/watch?v=4Se0_w0ISYk
 
