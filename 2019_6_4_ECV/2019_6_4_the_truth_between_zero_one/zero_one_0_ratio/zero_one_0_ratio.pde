@@ -8,7 +8,7 @@ void draw() {
   println("normal value",value);
   float x = value *mouseX;
   float y = value *mouseY;
-  println("mapped value",x);
-  println("mapped value",y);
+  println("map value x",x);
+  println("map value y",y);
   point(x,y);
 }

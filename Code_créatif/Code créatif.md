@@ -191,7 +191,7 @@ Python Processing Python
 C++ : Openframework, Cynder, polycode
 Carte Graphique : GLSL
 Jeu : Unity
-Langage de boite : VVVV, Pura Data
+Langage de boite : VVVV, Pure Data
 SuperCollider
 
 
