@@ -45,7 +45,7 @@ var sketch = (p: p5) => {
   
   let count = 0;
   p.draw = () => {
-    p.background(255,0,0);
+    p.background(255,255,0);
     
  
     if(count >= list.length) {

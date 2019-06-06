@@ -40,6 +40,8 @@ https://www.npmjs.com/
 
 3 / Code : Mini-projet en Processing, réalisation d'un environnement 3D avec des particules avec utilisation de la programmation orienté objet.
 
+4/ https://github.com/b-g/processing-sublime
+
 
 
 *SEMAINE 2

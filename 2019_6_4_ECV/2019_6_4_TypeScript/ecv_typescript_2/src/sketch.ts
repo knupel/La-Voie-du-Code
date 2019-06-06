@@ -35,7 +35,7 @@ var sketch = (p: p5) => {
   
   
   p.draw = () => {
-    p.background(255,0,0);
+    p.background(255,255,0);
     show_field(p);
   }
 
