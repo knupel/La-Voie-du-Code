@@ -202,6 +202,16 @@ Jeu : Unity
 Langage de boite : VVVV, Pure Data
 SuperCollider
 
+*framework
+
+JavaScript : 
+zdog > https://zzz.dog/
+Processing :
+Hype > https://www.hypeframework.com/
+
+
+
+
 
 *plateforme de code créatif en ligne
 
