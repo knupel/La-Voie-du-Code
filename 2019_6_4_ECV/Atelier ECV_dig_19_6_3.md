@@ -1,7 +1,7 @@
 *Atelier Code créatif ECV-digital Aix-en-Provence
 
 2019-2019
-v 0.0.7
+v 0.1.0
 
 
 *SEMAINE 1
@@ -44,15 +44,28 @@ https://www.npmjs.com/
 
 
 
+
+
+*J-1 : intervenant
+
+Évaluation
+
+
+
+
 *SEMAINE 2
 
 *Session 3 : élèves + intervenant
 
-1/ Évaluation
+1 / Projet : On regarde ce que chacun a fait pendant la semaine / question-réponse.
 
-2 / Code : On regarde ce que chacun a fait pendant la semaine, mise en place d'un atelier question-réponse.
+2 / Présentation : d'autre principe de code créatifs : Les champs de vecteurs 2D et 3D
 
-3 / Présentation : d'autre principe de code créatifs : Les champs de vecteurs 2D et 3D 
+3 / Projet : où je suis là en soutien
+
+lien :
+https://github.com/StanLepunK/Leapmotion
+
 
 *Session 4 : élèves + intervenant
 
@@ -60,15 +73,18 @@ https://www.npmjs.com/
 
 2 / Code : Utilisation des shaders avec Processing.
 
-3 / code : Application de cet atelier sur le mini projet
+3 / Projet : où je suis là en soutien
 
 Intervention externe.
 
 *session 5 : élèves + intervenant
 
-1 / Code : où je suis là en soutien
+1 / Projet : où je suis là en soutien
 
 
-*session 6 : intervenant
 
-1 / Évaluation de l'ensemble du travail
+
+
+*J+1 : intervenant
+
+Évaluation de l'ensemble du travail
