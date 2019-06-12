@@ -1,7 +1,7 @@
 *Atelier Code créatif ECV-digital Aix-en-Provence
 
 2019-2019
-v 0.1.0
+v 0.1.1
 
 
 *SEMAINE 1
@@ -59,7 +59,7 @@ https://www.npmjs.com/
 
 1 / Projet : On regarde ce que chacun a fait pendant la semaine / question-réponse.
 
-2 / Présentation : d'autre principe de code créatifs : Les champs de vecteurs 2D et 3D
+2 / Présentation : d'autre principe de code créatifs : Les champs de vecteurs 2D
 
 3 / Projet : où je suis là en soutien
 
