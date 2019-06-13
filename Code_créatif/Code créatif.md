@@ -1,7 +1,7 @@
 *Présentation du Code créatif
 
 2019-2019
-v 0.0.5
+v 0.0.6
 
 
 *principe
@@ -219,6 +219,15 @@ openProcessing : https://www.openprocessing.org/
 codePen : https://codepen.io/#
 shadertoy : https://www.shadertoy.com/
 sandbox : http://glslsandbox.com/
+
+*Exercice / exemples
+
+Matt DesLauriers : https://github.com/mattdesl/workshop-generative-art
+
+Daniel Shiffmann : https://github.com/shiffman/LearningProcessing
+
+
+
 
 
 *lien
