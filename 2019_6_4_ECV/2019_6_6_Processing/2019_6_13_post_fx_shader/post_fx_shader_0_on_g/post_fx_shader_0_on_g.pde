@@ -34,7 +34,7 @@ void filter_on_g() {
 	boolean on_g = true; // si c'est vrai, il n'y a pas de PGrapichs renvoyer.
 	boolean filter_is = true; // pas utile à supprimer au prochain dev ???
 	boolean two_pass = true; // Le flou gaussien est fait de deux passes, une seule est plus rapide mais moins efficace.
-	float strength = 1+ (abs(sin(frameCount *.01))*50); // puissance du flou
+	float strength = 1+ (abs(sin(frameCount *.01))*500); // puissance du flou
   ivec2 res = ivec2(); // pas utile à supprimer au prochain dev ???
 	fx_blur_gaussian(g,on_g,filter_is,two_pass,res,strength);
 }

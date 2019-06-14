@@ -6,7 +6,7 @@ import rope.vector.*;
 void setup() {
   size(640, 480);
   //set_input_camera(120);
-  set_input_camera(12);
+  set_input_camera(50);
   background(0);
 }
 

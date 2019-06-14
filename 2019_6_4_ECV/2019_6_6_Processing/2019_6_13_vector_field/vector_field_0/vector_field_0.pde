@@ -19,7 +19,7 @@ void setup() {
 	// field
 	int type = r.STATIC;
 	int pattern = r.PERLIN;
-	field = new Force_field(10,type,pattern);
+	field = new Force_field(50,type,pattern);
 	println("cols",field.get_cols());
 	println("rows",field.get_rows());
 	println("resolution",field.get_resolution());

@@ -19,8 +19,10 @@ void draw() {
   background(0);
   fill(255);
   stroke(255);
-  if(!keyPressed) {
-    rotation.sin_wave(frameCount,.01,.02,.03);
+  if(mousePressed) {
+    rotation.y = map(mouseX,0,width,0,TAU);
+    rotation.x = map(mouseY,0,height,0,TAU);
+    // rotation.sin_wave(frameCount,.01,.02,.03);
   }
   push();
   translate(width/2,height/2);
@@ -29,55 +31,14 @@ void draw() {
   rotateZ(rotation.z());
 
   update_position();
-  show();
+  // float amp = map(mouseX,0,width,50,width);
+  float amp = sin(frameCount * 0.01);
+  amp = map(amp,-1,1,width/10,width*2);
+  show(amp);
   pop();
 }
 
-void update_position() {
-  for(int i = 0 ; i < ecv.length ; i++) {
-    vec3 temp = ecv[i].get_pos();
-    vec3 motion = new vec3().rand(-1,1).mult(.01);
-    temp.add(motion);
-    if(temp.x() < -1) {
-      temp.x(1);
-    }
-
-    if(temp.y() < -1) {
-      temp.y(1);
-    }
-
-    if(temp.z() < -1) {
-      temp.z(1);
-    }
-
-    if(temp.x() > 1) {
-      temp.x(-1);
-    }
-
-    if(temp.y() > 1) {
-      temp.y(-1);
-    }
-
-    if(temp.z() > 1) {
-      temp.z(-1);
-    }
-    ecv[i].set_pos(temp);
-  }
-}
-
-void show() {
-  float amp = map(mouseX,0,width,50,width);
-  for(int i = 0 ; i < ecv.length ; i++) {
-    vec3 temp = ecv[i].get_pos();
-    temp.mult(amp);
-    show_item(i,temp.x(),temp.y(),temp.z());  
-  }
-}
-
-void show_item(int name, float x, float y, float z) {
-  // text(name,x,y,z);
-  push();
-  translate(x,y,z);
-  sphere(5);
-  pop();
+void mouseWheel(MouseEvent event) {
+  float e = event.getCount();
+  println(e);
 }
