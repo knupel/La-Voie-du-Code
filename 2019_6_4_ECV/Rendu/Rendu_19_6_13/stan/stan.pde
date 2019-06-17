@@ -84,8 +84,8 @@ void post_fx() {
   // fx_warp_proc(g, on_g,filter_is,strength_warp_fx);
 
 
-  ivec pix = abs(vec2().sin_wave(frameCount,.01,.02)).mult(20).add(2);
-  vec3
-  fx_pixel(g,true,true, ivec2(pix),10, vec3 level_source, boolean effect_is) {
+  vec2 pix = abs(vec2().sin_wave(frameCount,.01,.02)).mult(20).add(2);
+  //vec3
+  //fx_pixel(g,true,true, ivec2(pix),10, vec3 level_source, boolean effect_is) {
 
 }
