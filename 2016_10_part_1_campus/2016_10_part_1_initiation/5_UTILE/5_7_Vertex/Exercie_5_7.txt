@@ -1,2 +1,0 @@
-1 / remplacer les coordonnées de la methode Vertex par des variables Vec
-2 / Créer une méthode rectangle comme la méthode rect de Processing

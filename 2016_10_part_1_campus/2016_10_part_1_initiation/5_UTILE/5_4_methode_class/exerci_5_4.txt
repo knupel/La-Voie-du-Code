@@ -1,3 +1,0 @@
-1 / Créer votre propre méthode
-
-2 / créer une liste d'objet, en utilisant une class et les boucles

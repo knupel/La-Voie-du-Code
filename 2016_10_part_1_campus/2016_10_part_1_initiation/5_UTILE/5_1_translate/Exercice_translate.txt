@@ -1,5 +1,0 @@
-Exercice 1 :
-Bouger le rectangle par le milieu
-
-Exercice 2 :
-Faire bouger deux rectangles de façon opposés
