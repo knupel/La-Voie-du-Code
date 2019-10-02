@@ -1,11 +1,17 @@
-# La Voie du Code
+# La voie du code
 
-Ici vous trouverez un ensemble de sketch pour vous initier à la Voie du Code via le l'application Processing
+Pour en savoir plus sur Processing [processing](https://processing.org/)
 
-Here you can find few sketches to start on the Way of Code via Processing app
+Pour en savoir plus sur la voie du code [the way of code](http://thewayofcode.xyz)
 
-Pour en savoir plus sur Processing / More about Processing: [processing](https://processing.org/)
+Si vous aviez besoin de la librairie Rope [download](https://github.com/StanLepunK/Rope/blob/master/build_rope/Rope.zip)
 
-Pour en savoir plus sur la voie du code / More about the way of code: [the way of code](http://thewayofcode.xyz)
+Une norme parmis d'autres pour coder proprement [norme](https://github.com/StanLepunK/La-Voie-du-Code/blob/master/norme_voie_du_code.md)
 
-Si vous aviez besoin de la librairie Rope / If you need Rope library [download](https://github.com/StanLepunK/Rope/blob/master/build_rope/Rope.zip)
+# The way of code
+
+More about Processing: [processing](https://processing.org/)
+
+More about the way of code: [the way of code](http://thewayofcode.xyz)
+
+If you need Rope library [download](https://github.com/StanLepunK/Rope/blob/master/build_rope/Rope.zip)
