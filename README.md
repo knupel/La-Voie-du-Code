@@ -1,6 +1,10 @@
 # Norme
 [Pour coder propre, normez vous / to make a clean code use norme](https://github.com/StanLepunK/La-Voie-du-Code/blob/master/norme_voie_du_code.md)
 
+# Creatif / Creative
+
+[about creative code / à propos du code créatif](https://github.com/StanLepunK/code_creatif)
+
 # La voie du code
 
 Pour en savoir plus sur Processing [processing](https://processing.org/)
