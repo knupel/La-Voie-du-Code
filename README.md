@@ -1,3 +1,6 @@
+# Norme
+[Pour coder propre, normez vous / to make a clean code use norme](https://github.com/StanLepunK/La-Voie-du-Code/blob/master/norme_voie_du_code.md)
+
 # La voie du code
 
 Pour en savoir plus sur Processing [processing](https://processing.org/)
